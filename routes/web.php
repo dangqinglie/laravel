@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('index','Admin\IndexController@index');
+Route::namespace('Admin')->group(function(){
+	Route::get('index','IndexController@index');
+});
+
+Route::namespace('Web')->group(function(){
+	Route::get('index','IndexController@index');
+});
